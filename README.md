@@ -36,7 +36,7 @@ docker compose up -d
 Start your container using docker run
 
 ```bash
-docker run -e NFS_SERVER=10.54.7.1 -e NFS_PORT=8091 -d -p 80:80 --name nfsup nfsup
+docker run -e NFS_SERVER=<server ip> -e NFS_PORT=2049 -d -p 80:80 --name nfsup nfsup
 ```
 OR
 ```bash
