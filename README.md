@@ -4,7 +4,8 @@ This application is a simple Flask-based web service that monitors the availabil
 
 Docker Compose
 
-Create a local environment file to nominate your NFS Server and NFS Port. 2049 is the default TCP for the NFS service.
+Create a local environment file (.env) to configure your NFS Server and NFS Port. 
+2049 is the default TCP for the NFS service.
 
 ```
 NFS_SERVER=place.your.server.here
