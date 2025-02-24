@@ -9,7 +9,6 @@ Create a local environment file to nominate your NFS Server and NFS Port. 2049 i
 ```
 NFS_SERVER=place.your.server.here
 NFS_PORT=2049
-
 ```
 
 Create a docker-compose.yaml file
@@ -25,7 +24,6 @@ services:
       NFS_PORT: ${NFS_PORT}
     ports:
     - 80:80
-
 ```
 
 Start your container using docker compose
