@@ -4,6 +4,16 @@ This application is a simple Flask-based web service that monitors the availabil
 
 Docker Compose
 
+Create a local environment file to nominate your NFS Server and NFS Port. 2049 is the default TCP for the NFS service.
+
+```
+NFS_SERVER=place.your.server.here
+NFS_PORT=2049
+
+```
+
+Create a docker-compose.yaml file
+
 ```yaml
 
 services: 
@@ -18,6 +28,22 @@ services:
 
 ```
 
+Start your container using docker compose
+
+```bash
+
+docker compose up -d
+
+```
+Start your container using docker run
+
+```bash
+docker run -e NFS_SERVER=10.54.7.1 -e NFS_PORT=8091 -d -p 80:80 --name nfsup nfsup
+```
+OR
+```bash
+docker run --env-file .env -d -p 80:80 --name nfsup nfsup
+```
 
 Dockerfile
 
