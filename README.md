@@ -11,11 +11,19 @@ Docker Compose
 
 This is a simple example of how to include a code snippet in a README file.
 
-```python
-def hello_world():
-    print("Hello, world!")
+```yaml
 
-hello_world()```
+services: 
+  nfsup:
+    image: andreril/nfsup:latest
+    restart: unless-stopped
+    environment:
+      NFS_SERVER: ${NFS_SERVER}
+      NFS_PORT: ${NFS_PORT}
+    ports:
+    - 80:80
+
+```
 
 
 
